@@ -6,6 +6,7 @@
 using namespace std;
 
 int main(){
+   
    Matrix test(2,3);
   // test.set(0,1,3);
   // test.print();  
@@ -21,7 +22,7 @@ int main(){
    //test.array[0]=input[0];
 
    //test.print();
-   test1.print();
+  // test1.print();
    
    delete[] pt1;
    
@@ -34,22 +35,33 @@ int main(){
 
    Matrix test2(3,2,pt2);
    
-   test2.print();
+   //test2.print();
+
+
+   cout<<"pt2 address is :"<<pt2<<endl;
+   cout<<"test array address is :"<<test2.array<<endl;
+
 
    delete[] pt2;
+   pt2=NULL;
+   
+   Matrix result;
+   
+   result=test1;
+   cout<<"address of test1 is :"<<test1.array<<endl;
+   cout<<"address of result is:"<<result.array<<endl;
+  // result.print();
+ // Matrix test3;
+   cout<<"test1 address is:"<<&test1<<endl; 
+   
+   cout<<"test2 address is:"<<&test2<<endl;
 
-   Matrix result=test1*test2;
-   result.print();
+   
+   cout<<"result  address is:"<<&result<<endl;
 
-   /*
-   int (*pt)[3];
-   pt[0]=input[0];
-   pt[1]=input[1];
+  // (test1*test2);
 
 
-   Matrix test1(2,3,pt);
-   test1.print();
-  */
    return 0;
 
 }

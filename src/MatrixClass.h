@@ -10,8 +10,9 @@
 
 class Matrix{
    public:
-      Matrix(int r,int c); //defualt constructor
-      Matrix(int r,int c, int** arry);
+      Matrix();//default constructor
+      Matrix(int r,int c);//constructor with row and column number, values are all zero
+      Matrix(int r,int c, int** arry);//constructor with row/col number, and with a 2D array
       ~Matrix();
 
       int row;  //number of row
@@ -21,8 +22,8 @@ class Matrix{
       void set(int r, int c ,int* num);
       void print();
       //operator overload for matrix multiputation`
-      Matrix operator*(Matrix Mx);
-
+      Matrix& operator*(const Matrix& Mx);
+      Matrix& operator=(const Matrix& Mx); 	   
 
 };
 
